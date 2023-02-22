@@ -3,7 +3,7 @@ import { UserContext } from "../UserContext";
 import { Navigate, useNavigate } from "react-router-dom";
 
 import axios from "axios";
-import { getAccessToken } from "./utils/getAccessToken";
+import { getAccessToken } from "../utils/getAccessToken";
 
 const Login = () => {
   const [username, setUsername] = useState("");

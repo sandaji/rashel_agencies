@@ -1,39 +1,33 @@
-import logo from "./logo.svg";
-import "./App.css";
-import SideBar from "./components/SideBar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Home from "./components/Home";
-import Landing from "./components/Landing";
-import Land from "./components/Land";
-import { UserProvider } from "./UserContext";
-// import ProtectedRoute from "./components/utils/ProtectedRoute";
-import PrivateRoute from "./components/utils/ProtectedRoute";
+import styles from "./style";
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 
-function App() {
-  const isAuthenticated = true;
-  return (
-    <Router>
-      <UserProvider>
-        {/* <SideBar /> */}
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <PrivateRoute>
-                <Land />
-              </PrivateRoute>
-            }
-          />{" "}
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/test" element={<Home />}></Route>
-        </Routes>
-      </UserProvider>
-    </Router>
-  );
-}
+const App = () => (
+  <div className="bg-primary w-full overflow-hidden">
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Navbar />
+      </div>
+    </div>
+
+    <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Hero />
+      </div>
+    </div>
+    
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Stats />
+        <Business />
+        <Billing />
+        <CardDeal />
+        <Testimonials />
+        <Clients />
+        <CTA />
+        <Footer />
+      </div>
+    </div>
+  </div>
+);
 
 export default App;

@@ -11,11 +11,13 @@ node_modules
 # production
 /build
 
+virtual
 .vscode
 /rashel_agencies/_pycache__
 # misc
 .DS_Store
 .env.local
+/.venv
 .env.development.local
 .env.test.local
 .env.production.local

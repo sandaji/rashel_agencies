@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 // import instance from "../axios";
-import { getAccessToken } from "./utils/getAccessToken";
-import { Navigate, useNavigate } from "react-router-dom";
+import { getAccessToken } from "../utils/getAccessToken";
+import {useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
 const Register = () => {
