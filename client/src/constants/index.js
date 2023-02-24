@@ -2,6 +2,7 @@ import { people01, people02, people03, facebook, instagram, linkedin, twitter, a
 import {SiStarship} from 'react-icons/si';
 import {GoShield} from 'react-icons/go'
 import {AiOutlineSend} from 'react-icons/ai'
+import {FiFacebook, FiInstagram, FiLinkedin, FiTwitter} from "react-icons/fi"
 
 export const navLinks = [
   {
@@ -160,22 +161,22 @@ export const footerLinks = [
 export const socialMedia = [
   {
     id: "social-media-1",
-    icon: instagram,
+    icon: <FiInstagram  className={`w-[21px] h-[21px]  cursor-pointer text-white`}/>,
     link: "https://www.instagram.com/",
   },
   {
     id: "social-media-2",
-    icon: facebook,
+    icon: <FiFacebook  className={`w-[21px] h-[21px]  cursor-pointer text-white`}/>,
     link: "https://www.facebook.com/",
   },
   {
     id: "social-media-3",
-    icon: twitter,
+    icon: <FiTwitter  className={`w-[21px] h-[21px]  cursor-pointer text-white`}/>,
     link: "https://www.twitter.com/",
   },
   {
     id: "social-media-4",
-    icon: linkedin,
+    icon: <FiLinkedin className={`w-[21px] h-[21px]  cursor-pointer text-white`}/>,
     link: "https://www.linkedin.com/",
   },
 ];
