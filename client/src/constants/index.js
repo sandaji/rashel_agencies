@@ -1,4 +1,7 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox,  } from "../assets";
+import {SiStarship} from 'react-icons/si';
+import {GoShield} from 'react-icons/go'
+import {AiOutlineSend} from 'react-icons/ai'
 
 export const navLinks = [
   {
@@ -22,24 +25,24 @@ export const navLinks = [
 export const features = [
   {
     id: "feature-1",
-    icon: star,
+    icon: <SiStarship className="w-[64px] h-[64px] rounded-full text-dimWhite bg-purple-800" />,
     title: "Rewards",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "The best online trading that offer some tantalizing combinations of promotions and prizes",
   },
   {
     id: "feature-2",
-    icon: shield,
+    icon: <GoShield className="w-[60px] h-[60px] text-dimWhite rounded-full bg-purple-800" />,
     title: "100% Secured",
     content:
       "We take proactive steps make sure your information and transactions are secure.",
   },
   {
     id: "feature-3",
-    icon: send,
+    icon: <AiOutlineSend className="w-[64px] h-[64px] text-dimWhite rounded-full bg-purple-800" />,
     title: "Balance Transfer",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "A transfer money in and out of your wallet with no interest charges.",
   },
 ];
 
@@ -73,18 +76,18 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Digital currencies Exchanged",
+    value: "$30B+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Trusted wallet Investors",
+    value: "1M+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Countries Supported",
+    value: "95+",
   },
 ];
 
