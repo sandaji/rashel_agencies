@@ -12,6 +12,7 @@ export const navLinks = [
   {
     id: "features",
     title: "Dashboard",
+   
   },
   {
     id: "product",

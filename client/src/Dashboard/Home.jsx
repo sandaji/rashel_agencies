@@ -3,10 +3,9 @@ import Sidebar from "./SideBar";
 import SideBar from "./SideBar";
 import { Link } from "react-router-dom";
 
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard ,MdAccountCircle} from "react-icons/md";
 import { FcSettings } from "react-icons/fc";
 import { RiLoginBoxLine } from "react-icons/ri";
-import { MdAccountCircle } from "react-icons/md";
 import { BiArrowBack, BiHelpCircle } from "react-icons/bi";
 import { BsWalletFill } from "react-icons/bs";
 function Home() {
