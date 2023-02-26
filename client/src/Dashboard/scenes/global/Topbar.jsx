@@ -2,12 +2,7 @@ import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../../theme";
 import InputBase from "@mui/material/InputBase";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
+import {MdLightMode,MdDarkMode,MdNotifications,MdSettings,MdPersonAddAlt1,MdSearch} from "react-icons/md";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -24,7 +19,7 @@ const Topbar = () => {
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
         <IconButton type="button" sx={{ p: 1 }}>
-          <SearchIcon />
+          <MdSearch />
         </IconButton>
       </Box>
 
@@ -32,19 +27,19 @@ const Topbar = () => {
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
-            <DarkModeOutlinedIcon />
+            <MdDarkMode />
           ) : (
-            <LightModeOutlinedIcon />
+            <MdLightMode />
           )}
         </IconButton>
         <IconButton>
-          <NotificationsOutlinedIcon />
+          <MdNotifications />
         </IconButton>
         <IconButton>
-          <SettingsOutlinedIcon />
+          <MdSettings />
         </IconButton>
         <IconButton>
-          <PersonOutlinedIcon />
+          <MdPersonAddAlt1 />
         </IconButton>
       </Box>
     </Box>
