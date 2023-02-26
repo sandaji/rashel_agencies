@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../../theme";
 import InputBase from "@mui/material/InputBase";
 import {MdLightMode,MdDarkMode,MdNotifications,MdSettings,MdPersonAddAlt1,MdSearch} from "react-icons/md";
+import {BsWalletFill} from 'react-icons/bs';
 
 const Topbar = () => {
   const theme = useTheme();
@@ -31,6 +32,9 @@ const Topbar = () => {
           ) : (
             <MdLightMode />
           )}
+        </IconButton>
+        <IconButton>
+          <BsWalletFill />
         </IconButton>
         <IconButton>
           <MdNotifications />
