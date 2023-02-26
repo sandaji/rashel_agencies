@@ -24,8 +24,9 @@ function App () {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Register />} />
 
-              <PrivateRoute>
-              <Route path="/dashboard" element={<DashboardHome />} />
+              {/* <PrivateRoute> */}
+              <Route path="/dashboard" element={
+                <DashboardHome />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
@@ -36,7 +37,7 @@ function App () {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
-              </PrivateRoute>
+              {/* </PrivateRoute> */}
               </Routes>
               </>
 

@@ -4,26 +4,6 @@ import {GoShield} from 'react-icons/go'
 import {AiOutlineSend} from 'react-icons/ai'
 import {FiFacebook, FiInstagram, FiLinkedin, FiTwitter} from "react-icons/fi"
 
-export const navLinks = [
-  {
-    id: "home",
-    title: "Home",
-  },
-  {
-    id: "features",
-    title: "Dashboard",
-   
-  },
-  {
-    id: "product",
-    title: "About US",
-  },
-  {
-    id: "clients",
-    title: "Login/Register",
-  },
-];
-
 export const features = [
   {
     id: "feature-1",

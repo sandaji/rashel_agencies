@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../UserContext";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import { getAccessToken } from "../utils/getAccessToken";
@@ -9,85 +9,25 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { loginUser } = useContext(UserContext);
+
   const navigate = useNavigate();
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+
+   const { search } = useLocation();
+   const redirectInUrl = new URLSearchParams(search).get('redirect');
+   const redirect = redirectInUrl ? redirectInUrl : '/';
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
   };
 
   const handleSubmit = async (e) => {
-    // event.preventDefault();
+    e.preventDefault();
 
-    //     try {
-    //       const response = await fetch("http://localhost:5000/api/login/", {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({
-    //           username: username,
-    //           password: password,
-    //         }),
-    //       });
-    //       const data = await response.json();
-    //       if (data.authenticated) {
-    //         // User is authenticated
-    //         console.log("User authenticated");
-    //       } else {
-    //         // Authentication failed
-    //         console.log("Authentication failed");
-    //       }
-    //     } catch (error) {
-    //       console.error("Error occurred while authenticating user: ", error);
-    //     }
-
-    //   try {
-    //     const response = await axios.post(
-    //       "http://localhost:5000/auth/jwt/create",
-    //       {
-    //         username: username,
-    //         password: password,
-    //       }
-    //     );
-
-    //     // Store the JWT token in local storage or cookies.
-    //     localStorage.setItem("token", response.data.access);
-    //     console.log(response.data.access);
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // };
-
-    // const res = await getAccessToken(username, password);
-    // if (typeof res !== "undefined") {
-    //   // Usage of fetchUserData function
-    //   const accessToken = res.data.access;
-    //   console.log("access access = ", accessToken);
-
-    //   instance
-    //     .get("/auth/users/")
-    //     .then((response) => {
-    //       console.log(response);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-
-    // api.get("http://localhost:5000/auth/users/").then((response) => {
-    //   console.log(response.data);
-    // });
-
-    // fetchUserData(accessToken)
-    //   .then((userData) => {
-    //     console.log("UserData = ", userData);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
-
+    
     const response = await loginUser(e);
     if (response.status === 200) {
       navigate("/");
