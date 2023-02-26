@@ -18,6 +18,7 @@ import Calendar from "./Dashboard/scenes/calendar/calendar";
 import HomeScreen from "./screens/HomeScreen";
 import Login from "./screens/LoginScreen";
 import Register from "./screens/SignupScreen";
+import PrivateRoute from "./utils/ProtectedRoute";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -35,6 +36,8 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Register />} />
+
+              <PrivateRoute>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
@@ -46,7 +49,8 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
-            </Routes>
+              </PrivateRoute>
+              </Routes>
           </main>
         </div>
       </ThemeProvider>
