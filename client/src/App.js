@@ -26,17 +26,17 @@ function App () {
 
               {/* <PrivateRoute> */}
               <Route path="/dashboard" element={
-                <DashboardHome />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/invoices" element={<Invoices />} />
-              <Route path="/form" element={<Form />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/geography" element={<Geography />} />
+              <PrivateRoute>  <DashboardHome /> </PrivateRoute>} />
+              <Route path="/team" element={<PrivateRoute><Team /></PrivateRoute>} />
+              <Route path="/contacts" element={<PrivateRoute><Contacts /></PrivateRoute>} />
+              <Route path="/invoices" element={<PrivateRoute><Invoices /></PrivateRoute>} />
+              <Route path="/form" element={<PrivateRoute><Form /></PrivateRoute>} />
+              <Route path="/bar" element={<PrivateRoute><Bar /></PrivateRoute>} />
+              <Route path="/pie" element={<PrivateRoute><Pie /></PrivateRoute>} />
+              <Route path="/line" element={<PrivateRoute><Line /></PrivateRoute>} />
+              <Route path="/faq" element={<PrivateRoute><FAQ /></PrivateRoute>} />
+              <Route path="/calendar" element={<PrivateRoute><Calendar /></PrivateRoute>} />
+              <Route path="/geography" element={<PrivateRoute><Geography /></PrivateRoute>} />
               {/* </PrivateRoute> */}
               </Routes>
               </>
